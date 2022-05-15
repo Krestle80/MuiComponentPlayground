@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/compnentPlayground/static/css/main.21360faf.css",
+    "main.js": "/compnentPlayground/static/js/main.b106a911.js",
+    "static/js/787.9a44d1ea.chunk.js": "/compnentPlayground/static/js/787.9a44d1ea.chunk.js",
+    "index.html": "/compnentPlayground/index.html",
+    "main.21360faf.css.map": "/compnentPlayground/static/css/main.21360faf.css.map",
+    "main.b106a911.js.map": "/compnentPlayground/static/js/main.b106a911.js.map",
+    "787.9a44d1ea.chunk.js.map": "/compnentPlayground/static/js/787.9a44d1ea.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21360faf.css",
+    "static/js/main.b106a911.js"
+  ]
+}
