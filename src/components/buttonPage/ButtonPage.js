@@ -76,41 +76,47 @@ let MuiButton = styled(Button)(({theme}) =>({
 let ButtonPage = ({themeChange}) =>{
     
     return(
-        <Box sx={{width:'100%', height:'100%', backgroundColor: "primary.light"}}>
-            <Box sx = {{ width: "100%", height: '50%'}}>
-                <Paper sx = {{p:4, display: 'flex', justifyContent:"space-between", backgroundColor:'primary.dark'}}>
+        <Grid container spacing={2} sx = {{m:2, p:2}}>
+            <Grid item lg={2} sx= {{ display: "row", height: '50%' }} ></Grid>
+            <Grid item lg={8}>
+                <Box sx={{width:'100%', height:'100%', backgroundColor: "primary.light"}}>
+                    <Box sx = {{ width: "100%", height: '50%'}}>
+                        <Paper sx = {{p:4, display: 'flex', justifyContent:"space-between", backgroundColor:'primary.dark'}}>
 
-                            <RedButton variant="contained" size="large" onClick={()=>{themeChange(1)}}>Red</RedButton>
+                                    <RedButton variant="contained" size="large" onClick={()=>{themeChange(1)}}>Red</RedButton>
 
-                            <YellowButton variant = "contained" size="large" onClick={()=>{themeChange(2)}}>Yellow</YellowButton>
+                                    <YellowButton variant = "contained" size="large" onClick={()=>{themeChange(2)}}>Yellow</YellowButton>
 
-                            <BlueButton variant = "contained" size="large" onClick={()=>{themeChange(3)}}>Blue</BlueButton>
+                                    <BlueButton variant = "contained" size="large" onClick={()=>{themeChange(3)}}>Blue</BlueButton>
 
-                </Paper>
-            </Box>
-            <Box sx = {{ width: "100%", height: '50%'}}>
-                <Paper sx = {{p:4, display: "flex", justifyContent:'space-between', backgroundColor:'primary.dark'}}>
+                        </Paper>
+                    </Box>
+                    <Box sx = {{ width: "100%", height: '50%'}}>
+                        <Paper sx = {{p:4, display: "flex", justifyContent:'space-between', backgroundColor:'primary.dark'}}>
 
-                            <OrangeButton variant = "contained" size="large" onClick={()=>{themeChange(4)}}>Orange</OrangeButton>
+                                    <OrangeButton variant = "contained" size="large" onClick={()=>{themeChange(4)}}>Orange</OrangeButton>
 
-                            <GreenButton variant = "contained" size="large" color="success" onClick={()=>{themeChange(5)}}>Green</GreenButton>
+                                    <GreenButton variant = "contained" size="large" color="success" onClick={()=>{themeChange(5)}}>Green</GreenButton>
 
-                            <PurpleButton variant = "contained" size="large" onClick={()=>{themeChange(6)}}>Purple</PurpleButton>
+                                    <PurpleButton variant = "contained" size="large" onClick={()=>{themeChange(6)}}>Purple</PurpleButton>
 
-                </Paper>
-            </Box>
-            <Box sx = {{ width: "100%", height: '50%'}}>
-            <Paper sx = {{p:4, display: "flex", justifyContent:'space-between', backgroundColor:'primary.dark'}}>
+                        </Paper>
+                    </Box>
+                    <Box sx = {{ width: "100%", height: '50%'}}>
+                        <Paper sx = {{p:4, display: "flex", justifyContent:'space-between', backgroundColor:'primary.dark'}}>
 
-                        <LightButton variant = "contained" size="large" onClick={()=>{themeChange(7)}}>Light</LightButton>
+                                    <LightButton variant = "contained" size="large" onClick={()=>{themeChange(7)}}>Light</LightButton>
 
-                        <DarkButton variant = "contained" size="large" onClick={()=>{themeChange(8)}}>Dark</DarkButton>
+                                    <DarkButton variant = "contained" size="large" onClick={()=>{themeChange(8)}}>Dark</DarkButton>
 
-                        <MuiButton variant = "contained" size="large" onClick={()=>{themeChange(0)}}>Mui</MuiButton>
+                                    <MuiButton variant = "contained" size="large" onClick={()=>{themeChange(0)}}>Mui</MuiButton>
 
-            </Paper>
-        </Box>
-        </Box>
+                        </Paper>
+                    </Box>
+                </Box>
+            </Grid>
+            <Grid item lg={2}></Grid>
+        </Grid>
     )
 }
 export default ButtonPage

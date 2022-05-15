@@ -4,9 +4,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import BaseHeader from './headers/BaseHeader';
 import ButtonPage from './components/buttonPage/ButtonPage';
+import CardPage from './components/cardPage/CardPage'
 import {yellow, amber, red, deepOrange, lightBlue, blue, orange, deepPurple, green, blueGrey} from '@mui/material/colors'
 import { useState } from 'react';
-
+import { BrowserRouter as Router, 
+  Routes, 
+  Route 
+} from 'react-router-dom';
 
 let themeArray = [createTheme({}),
   createTheme({
@@ -24,7 +28,7 @@ let themeArray = [createTheme({}),
     palette: {
       primary:{
       main:amber[500],
-      dark: yellow[600]
+      dark: amber[700]
       },
       // secondary:{
 
@@ -104,23 +108,21 @@ function App() {
       setThemeNum(newThemeNum)
   }
   return (
-  <Box sx={{height:'100%'}}>
-    <CssBaseline />
-    <ThemeProvider theme={themeArray[themeNum]}>
+    <Router>
+      <Box sx={{height:'100%'}}>
+        <CssBaseline />
+        <ThemeProvider theme={themeArray[themeNum]}>
+                  
         <Box className="App" sx ={{ height: '200%', backgroundColor: "primary.light"}}>
-          <BaseHeader></BaseHeader>
-          <Grid container spacing={2} sx = {{m:2, p:2}}>
-            <Grid item lg={2} sx= {{ display: "row", height: '50%' }} >
-            </Grid>
-            <Grid item lg={8}>
-              <ButtonPage themeChange={themeChange} />
-            </Grid>
-            <Grid item lg={2}>
-            </Grid>
-          </Grid>
+            <BaseHeader></BaseHeader>
+            <Routes>
+              <Route path="/" element={<ButtonPage themeChange={themeChange} />}></Route>
+              <Route path="/calculator" element={<CardPage />}></Route>
+            </Routes>
         </Box>
-    </ThemeProvider>
-  </Box>
+        </ThemeProvider>
+      </Box>
+    </Router>
   );
 }
 
