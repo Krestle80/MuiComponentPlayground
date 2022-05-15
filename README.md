@@ -1,7 +1,7 @@
 # MuiComonentPlayGround
 ![View Of WebPage](./componentPlaygroundHomePic0.0.1.png)
 
-### this is a page dedicated to creating Mui Components. At the moment it has a themes page with 9 color schemes to choose from, and the front end of a calculator page.
+### this is a page dedicated to creating Mui Components. At the moment it has a themes page with 9 color schemes to choose from, and a calculator page capable of addition, subtraction, multiplication, and divison.
 
 
 ## Usage 
