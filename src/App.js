@@ -108,7 +108,7 @@ function App() {
       setThemeNum(newThemeNum)
   }
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Box sx={{height:'100%'}}>
         <CssBaseline />
         <ThemeProvider theme={themeArray[themeNum]}>
@@ -116,7 +116,7 @@ function App() {
         <Box className="App" sx ={{ height: '200%', backgroundColor: "primary.light"}}>
             <BaseHeader></BaseHeader>
             <Routes>
-              <Route path="/" element={<ButtonPage themeChange={themeChange} />}></Route>
+              <Route path="" element={<ButtonPage themeChange={themeChange} />}></Route>
               <Route path="/calculator" element={<CardPage />}></Route>
             </Routes>
         </Box>

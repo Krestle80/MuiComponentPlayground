@@ -13,7 +13,7 @@ let BaseHeader = () =>{
             <Toolbar sx= {{ display: "flex", justifyContent: "space-between"}}>
                 <Box>Logo?</Box>
                 <Box sx={{display:"flex", justifyContent:"end"}}>
-                    <Link to='/'>
+                    <Link to=''>
                         <Typography sx={{mr:2}}>Themes</Typography>  
                     </Link>
                     <Link to='/calculator'>

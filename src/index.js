@@ -7,13 +7,16 @@ import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<App tab="home" />);
+root.render(<App />);
+let app = ()=>{
 
-root.render(
-  <React.StrictMode>
-      <App />
-  </React.StrictMode>
-);
+  root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+  );
+}
+app()
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
